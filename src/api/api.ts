@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosRequestHeaders } from "axios";
+import axios from "axios";
 
 import { PATHS } from "../constants/paths";
 import { REQUESTS } from "../constants/requests";
@@ -20,7 +20,7 @@ instance.interceptors.request.use((config) => {
 })
 
 instance.interceptors.response.use((config) => {
-    if ((config.headers ??= {}).Authorization !== "Bearer fakeHASH") { 
+    if ((config.config.headers ??= {}).Authorization !== "Bearer fakeHASH") { 
         store.dispatch(setAuth(false));
     }
 

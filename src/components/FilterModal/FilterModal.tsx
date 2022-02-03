@@ -8,7 +8,7 @@ import { GetOrderType, IOrder } from '../../types/Order';
 
 
 interface FilterOrderModalProps {
-    restaurantId: any,
+    restaurantId: any, //rrd6
     closeModal: (value: RestaurantCloseModalType) => void,
     filterModalState: boolean
 }

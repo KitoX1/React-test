@@ -12,8 +12,8 @@ export const getOrders = createAsyncThunk(
 
             dispatch(setOrders(data.reverse()));
             
-        } catch (error: any) {
-            alert(error.message)
+        } catch (error) {
+            error instanceof Error &&  alert(error.message)
         }
     }
 )
@@ -26,8 +26,8 @@ export const addOrder = createAsyncThunk(
             
             dispatch(getOrders({ restaurantId: data.restaurantId, filters: localStorage.getItem('filter') || '' }));
 
-        } catch (error: any) {
-            alert(error.message)
+        } catch (error) {
+            error instanceof Error && alert(error.message)
         } 
     }
 )
@@ -40,8 +40,8 @@ export const editOrder = createAsyncThunk(
 
             dispatch(editOrderInStore(data));
 
-        } catch (error: any) {
-            alert(error.message)
+        } catch (error) {
+            error instanceof Error &&  alert(error.message)
         } 
     }
 )

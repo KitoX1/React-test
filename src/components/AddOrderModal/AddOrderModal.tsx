@@ -10,7 +10,7 @@ const { Option } = Select;
 
 
 interface AddOrderModalProps {
-    restaurantId: any;
+    restaurantId: any; // rrd6
     closeModal: (value: RestaurantCloseModalType) => void;
     addModalState: boolean;
 }

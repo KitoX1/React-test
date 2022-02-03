@@ -12,8 +12,8 @@ export const getRestaurants = createAsyncThunk(
 
             dispatch(setRestaurants(data.reverse()));
 
-        } catch (error: any) {
-            alert(error.message)
+        } catch (error) {
+            error instanceof Error &&  alert(error.message)
         }
     }
 )
@@ -26,8 +26,8 @@ export const addRestaurant = createAsyncThunk(
             
             dispatch(addRestaurantToStore(data));
 
-        } catch (error: any) {
-            alert(error.message)
+        } catch (error) {
+            error instanceof Error &&  alert(error.message)
         } 
     }
 )

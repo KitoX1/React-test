@@ -15,8 +15,8 @@ export const checkPhoneNumber = createAsyncThunk(
                 throw new Error('Неверный номер телефона');
             }
 
-        } catch (error: any) {
-            alert(error.message)
+        } catch (error) {
+            error instanceof Error && alert(error.message)
         }
     }
 )
@@ -35,8 +35,8 @@ export const checkPhoneCode = createAsyncThunk(
                 throw new Error('Неверный код');
             }
 
-        } catch (error: any) {
-            alert(error.message)
+        } catch (error) {
+            error instanceof Error && alert(error.message)
         }
     }
 )
