@@ -1,0 +1,36 @@
+.restaurant {
+  &__addBtn {
+    font-size: 18px;
+    border-radius: 4px;
+    transform: translate(50px, -6px);
+    padding: 0 15px !important;
+  }
+  &__title {
+    font-size: 40px;
+  }
+
+  &__table {
+    th:last-child {
+      width: 25%;
+      text-align: center;
+    }
+
+    .ant-menu-inline {
+      text-align: center;
+    }
+
+    .ant-menu-sub.ant-menu-inline > .ant-menu-item,
+    .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+      padding: 0 !important;
+    }
+  }
+}
+
+.ant-layout-content {
+  margin: 0 40px;
+  min-height: 100vh;
+}
+
+.ant-layout-sider {
+  background: #f0f2f5;
+}
